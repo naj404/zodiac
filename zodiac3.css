@@ -1,0 +1,172 @@
+/** apply to the whole page **/
+* {
+    margin: 0;
+    padding: 0;
+    
+    font-family: sans-serif;
+    
+    
+
+}
+
+
+
+/** sets off the bg color **/
+.bgColor {
+    height: 100vh;
+    background-image: linear-gradient(to left, #355C7D , #6C5B7B, #C06C84);
+}
+
+
+
+
+
+/** header (logo and navigation) **/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+
+
+
+.nav {
+    position: relative; left: -200px; 
+}
+
+.nav a {
+    position: relative;
+    
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    
+    font-weight: 600;
+    margin-right: 90px;
+
+}
+
+.nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: white;
+
+    transition: 0.3s;
+}
+
+.nav a:hover::before {
+    width: 100%;
+}
+
+
+
+
+
+span {
+    margin-right: 1000px;
+    margin-top: 5px;
+    margin-left: 60px;
+    color: white;
+    font-size: 35px;
+    letter-spacing: 5px;
+    font-weight: 700;
+    
+    
+}
+
+/** for profile box section **/
+.profile {
+    background-image: linear-gradient(to top, #355C7D , #6C5B7B, #C06C84);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: 700px;
+    width: 1100px;
+    border-radius: 10px;
+    
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+
+    position: relative; top: 150px;
+    overflow: hidden;
+}
+
+.profile h2 {
+    position: relative; top: -280px; left: 450px;
+    padding-left: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: white;
+    font-family: "Protest Revolution", sans-serif;
+	font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.profile .about {
+    position: relative; top: 200px; left: 328px;
+
+}
+
+.aboutText {
+    color: rgb(58, 13, 13);
+    position: relative; top: 55px; left: 440px;
+    margin: 0;
+    padding: 0;
+    
+	
+    font-style: normal;
+    font-size: 19px;
+    letter-spacing: 2px;
+    
+}
+   
+    
+
+
+img {
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 35%;
+    border: solid 1.5px #355C7D;
+    height: 188px;
+    width: 190px;
+    position: relative; top: -80px; left: -150px;
+    
+
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+img:hover {
+    transform: scale(1.03);
+    box-shadow: 5px 5px 15px #355C7D;
+}
+
+
+.text {
+    z-index: 1;
+}
+.text p {
+    color: rgb(58, 13, 13);
+    position: relative; top: -50px; left: -90px;
+    font-size: 17px;
+
+}

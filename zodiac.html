@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lives Counter x Zodiac</title>
+    <link rel="stylesheet" href="zodiac.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+    
+    
+    
+
+</head> 
+
+<body>
+
+    <div class="bgColor">
+
+        <header class="header">
+
+            <span>CodeCraft.naj</span>
+
+            <nav class="nav">
+                <a href="zodiac.html">Home</a>
+                
+                <a href="zodiac3.html">About</a>
+            </nav>
+
+            
+
+        </header>
+
+        <section class="loginBox">
+            <div>
+                <h2>How Many Days Have You Lived? </h2>
+                <p>Please fill out the following information below if 
+                    you want to count how many days you have lived on this planet and to know your zodiac sign.</p>
+                <form>
+        
+                    Enter Your Name: <br>
+                    <input type="text" id="pangalan" placeholder="name"><br><br>
+                    Enter Your Date of Birth: <br>
+                    <input type="date" id="dob" name="date"><br><br>
+                    
+
+                
+                    <div class="result">
+                        <input type="button" value="Submit" onclick="calculateDays()">
+                    </div>
+                </form>
+        
+            </div>
+       </section>
+       
+       <script type="text/javascript">
+
+            function calculateDays() {
+                var dobInput = document.getElementById('dob').value;
+                var dob = new Date(dobInput);
+                var today = new Date();
+                var timeDiff = Math.abs(today.getTime() - dob.getTime());
+                var days = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+                var name = document.getElementById('pangalan').value;
+                alert("Hi, " + name + "! You have lived on this planet for " + days + " days.");
+                getZodiacSign(dob.getMonth() + 1, dob.getDate());
+            }
+
+            function getZodiacSign(month, day) {
+                var zodiacSigns = [
+                    "Capricorn",
+                    "Aquarius",
+                    "Pisces",
+                    "Aries",
+                    "Taurus",
+                    "Gemini",
+                    "Cancer",
+                    "Leo",
+                    "Virgo",
+                    "Libra",
+                    "Scorpio",
+                    "Sagittarius",
+                    "Capricorn"
+                ];
+                var zodiacDates = [
+                    20, 19, 20, 20, 21, 21, 22, 23, 23, 23, 22, 22
+                ];
+                var index = month;
+                if (day < zodiacDates[month - 1]) {
+                    index -= 1;
+                }
+                alert("And your zodiac sign is " + zodiacSigns[index]);
+            }
+
+       </script>
+       
+
+    </div>
+
+    
+    
+    
+</body>
+</html>
